@@ -1,0 +1,47 @@
+<html>
+
+    <head>
+    
+        <title>Convert Numbers to Words</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+         <script src="scripts/jquery.min.js"></script>
+    </head>
+
+    <body>
+       
+        <div class='form-style'>
+             <h1>Currency Converter</h1>
+            <div id="result"></div>
+            <label for="number"> Enter Number to convert: </label>
+            <input type="text" id="number">
+        </div>
+    
+    </body>
+    
+    
+    <script>
+                $(document).ready(function() {
+                
+                    $('#number').keyup(function(){
+                        
+                        $.ajax({
+                            
+                            type: "GET",
+                            url: "convert_Number.php",
+                            data: 'number=' + $('#number').val(),
+                            
+                            success: function(msg){
+                                
+                                $('#result').html(msg);
+                                
+                            }//end success
+                            
+                        }); // Ajax Call
+
+                        
+                    }); //event handler
+                
+                }); //document.ready
+                
+            </script>
+</html>
