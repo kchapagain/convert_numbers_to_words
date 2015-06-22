@@ -1,6 +1,6 @@
 # convert_numbers_to_words
 
-Function will convert numbers into words. 
+Function will convert numbers into words. Feel free to use and edit as you need. 
 
 Installation Instruction
 
